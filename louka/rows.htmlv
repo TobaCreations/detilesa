@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 0px;
+  margin-bottom: 8px;
+}
+
+.p {
+  font-family: Montserrat;
+  margin-top: 0px;
+  background-color: lightgrey;
+  height: 100%;
+  padding: 20px 20px;
+}
+.column {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  max-width: 50%;
+  padding: 0 0px;
+}
+
+.column img {
+  margin-top: 0px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+
+
+
+
+
+<!-- Header -->
+<div class="header">
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="column">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <p class="p"><b>SALAŠ</b><br><br>
+    dfjidfji </p>
+
+  </div>  
+</div>
+
+<div class="row"> 
+  <div class="column">
+    <div class="pa-carousel-widget" style="width:100%; height:268px; display:none;"
+  data-link="https://photos.app.goo.gl/CSV7NDstShTUwUZq5"
+  data-title="Mr. Monstro"
+  data-description="4 new photos · Album by Pavel Macháček">
+  <object data="https://lh3.googleusercontent.com/XlH6wo2PzrAEqmplYrZwV0fI-2TafTT6BRwZhKDfZSHd_zT7HIdPyPWd3Xuqhn1QQADuTJ32QFmcgYiTOEU0sC4Bvf-VyTIiq-DxxEaxIeWDYyUK_VjaW8-zrMGBvekDZT77lpduYQ=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/VvK__Vx8kpPTP57WZPLblacZbTE0NqWeIGTyHSQ8Rq9pvOpWQG_CQE_tOc6jHPtj02XIBYa0Zo9fWbXXQyNYs9hDGGj34QibKFJky4W9nYBpSb57OwxiQoDyo25vzIXMTN2SNxuzqg=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/HISe-DV_b4gjLvSEGzrJlsqBU2rSE8uQpSqHHKTPihg_Ax9VtfCrOrvdXF01raBeBleAWQKI7Hfb4_w9vZeJKFymQfNTlubwXxTBTbqGTPwjg7S0CBtQsQJqsspvIhD9c-pniSZrEw=w1920-h1080"></object>
+  <object data="https://lh3.googleusercontent.com/05lhR1IAQY_B9rdQ_GvHDNLe1lJsSPyyuDeIMkt--gDDAnO2_EATwif7-sfNd2K_48RvyqKmN-u2svKZ06yfh8bnrbQ5kBUrIHfZvWheTzDGhIeFd1roPor-F_BycJmVKbQO6a9EaA=w1920-h1080"></object>
+</div>
+  </div>
+  <div class="column">
+    <p class="p"> Class </p>
+  </div>  
+</div>
+
+</body>
+</html>
