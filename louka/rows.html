@@ -332,11 +332,10 @@ body {
 
 .pt {
   font-family: Montserrat;
-  background-color: lightgrey;
+  background-color: white;
   padding: 20px 20px;
   height: 100%;
   margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 
@@ -359,7 +358,7 @@ body {
 <script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<img src="https://tobacreations.github.io/detilesa/louka/hover.jpg" style="margin-bottom:-4px" usemap="#image-map">
+<img id="imgmap" src="https://tobacreations.github.io/detilesa/louka/hover.jpg" style="margin-bottom:-4px" usemap="#image-map">
 
 <map name="image-map">
     <area class="prk" alt="Parkoviště" title="Parkoviště" href="" coords="85,119,26" shape="circle">
@@ -380,7 +379,13 @@ body {
     <area class="ohn" alt="Nové ohniště" title="Nové ohniště" href="" coords="552,239,19" shape="circle">
 </map>
 
+<map name="hide-map">
+    <area class="drk" alt="Parkoviště" title="Parkoviště" href="" coords="85,119,26" shape="circle">
+</map>
+
 <script>
+$(".crk").on("click", function(e){ e.preventDefault(); hide();});
+$(".drk").on("click", function(e){ e.preventDefault(); show();});
 $(".prk").on("click", function(e){ e.preventDefault(); change("prk");});
 $(".mic").on("click", function(e){ e.preventDefault(); change("mic");});
 $(".sls").on("click", function(e){ e.preventDefault(); change("sls");});
@@ -401,26 +406,61 @@ function change(id) {
     var id2 = id + "2";
 	document.getElementById("LC").src = document.getElementById(id1).src;
     document.getElementById("RC").innerHTML = document.getElementById(id2).innerHTML;
+    document.getElementById("RC").style = "";
+  }
+  
+function hide() {
+	document.getElementById("imgmap").src = "https://tobacreations.github.io/detilesa/louka/normal.jpg";
+    document.getElementById("imgmap").usemap = "hide-map";
+  }
+  
+function show() {
+	document.getElementById("imgmap").src = "https://tobacreations.github.io/detilesa/louka/hover.jpg";
+    document.getElementById("imgmap").usemap = "img-map";
   }
 </script>
 
 
 <div id="box" class="row">
 <div class="columnt"><img id="LC" src="" style="width:100%"/></div>
-<div class="columnt"><p id="RC" class="pt"></p></div>
+<div class="columnt"><p id="RC" class="pt" style="background-color: transparent"></p></div>
 </div>
 
 <!-- Photo Grid -->
 <div class="row"> 
   <div class="columnL">
     <img id="prk1" src="/w3images/wedding.jpg" style="width:100%">
-    <p id="prk2" class="p"><b>PARKOVIŠTĚ</b><br><br> dfjidfji </p>
-    <img id="prk1" src="/w3images/wedding.jpg" style="width:100%">
-    <p id="prk2" class="p"><b>PARKOVIŠTĚ</b><br><br> dfjidfji </p>
+    <p id="prk2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="mic1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="mic2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="sls1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="sls2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="dln1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="dln2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="hrs1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="hrs2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="tbr1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="tbr2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="dld1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="dld2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="kdb1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="kdb2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
   </div>  
   <div class="columnR">
-    <img src="/w3images/wedding.jpg" style="width:100%">
-    <p class="p"><b>MÍČOVÉ HRY</b><br><br> dfjidfji </p>
+    <img id="zvr1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="zvr2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="rst1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="rst2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="pln1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="pln2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="zvd1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="zvd2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="zzv1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="zzv2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="asf1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="asf2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
+    <img id="std1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="std2" class="p"><b>NÁZEV</b><br><br>TEXT</p>
   </div>  
 </div>
 
