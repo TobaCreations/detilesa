@@ -261,3 +261,169 @@ function change(id) {
 
 </body>
 </html>
+
+
+<!-- 191207 - 1727-->
+<!DOCTYPE html>
+<html>
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  width: 725px;
+  font-family: Arial;
+  background-color: lightgrey;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 0px;
+}
+.p {
+  font-family: Montserrat;
+  background-color: white;
+  padding: 20px 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.columnL {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  max-width: 50%;
+  padding-right: 4px;
+  margin-top: 8px;
+}
+
+.columnR {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  max-width: 50%;
+  padding-left: 4px;
+  margin-top: 8px;
+  }
+  
+.columnt {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+  max-width: 50%;
+  margin-top: 0px;
+}
+ 
+.columnR img, 
+.columnL img {
+  vertical-align: middle;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  margin-top: 8px;
+}
+
+.columnt img {
+  vertical-align: middle;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+}
+
+.pt {
+  font-family: Montserrat;
+  background-color: lightgrey;
+  padding: 20px 20px;
+  height: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+</style>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/publicalbum@latest/embed-ui.min.js" async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<img src="https://tobacreations.github.io/detilesa/louka/hover.jpg" style="margin-bottom:-4px" usemap="#image-map">
+
+<map name="image-map">
+    <area class="prk" alt="Parkoviště" title="Parkoviště" href="" coords="85,119,26" shape="circle">
+    <area class="mic" alt="Míčové hry" title="Míčové hry" href="" coords="221,184,25" shape="circle">
+    <area class="sls" alt="Salaš" title="Salaš" href="" coords="466,168,25" shape="circle">
+    <area class="dln" alt="Velká dílna" title="Velká dílna" href="" coords="593,228,26" shape="circle">
+    <area class="hrs" alt="Hřiště - kůl" title="Hřiště - kůl" href="" coords="302,275,19" shape="circle">
+    <area class="tbr" alt="Místo pro táboření" title="Místo pro táboření" href="" coords="448,246,25" shape="circle">
+    <area class="dld" alt="Dlouhý dům" title="Dlouhý dům" href="" coords="467,125,18" shape="circle">
+    <area class="kdb" alt="Kadibudky" title="Kadibudky" href="" coords="562,130,19" shape="circle">
+    <area class="zvr" alt="Závora" title="Závora" href="" coords="364,111,18" shape="circle">
+    <area class="rst" alt="Studánka + vchod" title="Studánka + vchod" href="" coords="517,120,18" shape="circle">
+    <area class="pln" alt="Polňačka" title="Polňačka" href="" coords="240,88,18" shape="circle">
+    <area class="zvd" alt="Cesta k závodišti" title="Cesta k závodišti" href="" coords="163,23,18" shape="circle">
+    <area class="zzv" alt="Zadní závora" title="Zadní závora" href="" coords="129,142,19" shape="circle">
+    <area class="asf" alt="Asfaltka" title="Asfaltka" href="" coords="38,264,18" shape="circle">
+    <area class="std" alt="Studna" title="Studna" href="" coords="553,192,19" shape="circle">
+    <area class="ohn" alt="Nové ohniště" title="Nové ohniště" href="" coords="552,239,19" shape="circle">
+</map>
+
+<script>
+$(".prk").on("click", function(e){ e.preventDefault(); change("prk");});
+$(".mic").on("click", function(e){ e.preventDefault(); change("mic");});
+$(".sls").on("click", function(e){ e.preventDefault(); change("sls");});
+$(".dln").on("click", function(e){ e.preventDefault(); change("dln");});
+$(".hrs").on("click", function(e){ e.preventDefault(); change("hrs");});
+$(".tbr").on("click", function(e){ e.preventDefault(); change("tbr");});
+$(".dld").on("click", function(e){ e.preventDefault(); change("dld");});
+$(".kdb").on("click", function(e){ e.preventDefault(); change("kdb");});
+$(".zvr").on("click", function(e){ e.preventDefault(); change("zvr");});
+$(".rst").on("click", function(e){ e.preventDefault(); change("rst");});
+$(".pln").on("click", function(e){ e.preventDefault(); change("pln");});
+$(".zvd").on("click", function(e){ e.preventDefault(); change("zvd");});
+$(".zzv").on("click", function(e){ e.preventDefault(); change("zzv");});
+$(".asf").on("click", function(e){ e.preventDefault(); change("asf");});
+$(".std").on("click", function(e){ e.preventDefault(); change("std");});
+function change(id) {
+	var id1 = id + "1";
+    var id2 = id + "2";
+	document.getElementById("LC").src = document.getElementById(id1).src;
+    document.getElementById("RC").innerHTML = document.getElementById(id2).innerHTML;
+  }
+</script>
+
+
+<div id="box" class="row">
+<div class="columnt"><img id="LC" src="" style="width:100%"/></div>
+<div class="columnt"><p id="RC" class="pt"></p></div>
+</div>
+
+<!-- Photo Grid -->
+<div class="row"> 
+  <div class="columnL">
+    <img id="prk1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="prk2" class="p"><b>PARKOVIŠTĚ</b><br><br> dfjidfji </p>
+    <img id="prk1" src="/w3images/wedding.jpg" style="width:100%">
+    <p id="prk2" class="p"><b>PARKOVIŠTĚ</b><br><br> dfjidfji </p>
+  </div>  
+  <div class="columnR">
+    <img src="/w3images/wedding.jpg" style="width:100%">
+    <p class="p"><b>MÍČOVÉ HRY</b><br><br> dfjidfji </p>
+  </div>  
+</div>
+
+
+</body>
+</html>
